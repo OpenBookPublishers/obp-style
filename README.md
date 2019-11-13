@@ -20,7 +20,8 @@ All files will be output to `./dist`. The directory structure will be:
 
 #### With docker
 ```
-docker run --rm -v /path/to/obp-style/dist:/src/dist openbookpublishers/obp-style
+docker build . -t obp-style
+docker run --rm -v /path/to/obp-style/dist:/src/dist obp-style
 ```
 
 #### With npm
