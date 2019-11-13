@@ -1,5 +1,7 @@
 language: node_js
 node_js:
   - '12'
+before_script:
+  - cp config.js.example config.js; cp favicon.png.example favicon.png
 script:
   - npm run build
