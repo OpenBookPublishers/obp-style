@@ -8,7 +8,9 @@
   },
   "license": "MIT",
   "scripts": {
+    "clean": "gulp clean",
     "build": "gulp",
+    "icons": "gulp icons",
     "sass": "gulp sass",
     "metadata": "gulp metadata",
     "watch": "gulp watch"
