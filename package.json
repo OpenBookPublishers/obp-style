@@ -8,6 +8,7 @@
   },
   "license": "MIT",
   "scripts": {
+    "lint": "eslint .",
     "clean": "gulp clean",
     "build": "gulp",
     "icons": "gulp icons",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "academicons": "1.8.6",
     "del": "^4.1.1",
+    "eslint": "^2.13.1",
     "icomoon": "1.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^7.0.1",
