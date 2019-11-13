@@ -109,6 +109,7 @@ function metadata() {
 };
 
 exports.default = gulp.series(sass, icomoon, academicons, icons, metadata);
+exports.all = exports.default;
 exports.clean = clean;
 exports.sass = sass;
 exports.icons = icons;
