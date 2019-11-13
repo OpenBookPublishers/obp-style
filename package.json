@@ -4,7 +4,7 @@
   "description": "OBP House Style",
   "repository": {
     "type": "git",
-    "url": "https://github.com/openbookpublishers/obp_style.git"
+    "url": "https://github.com/openbookpublishers/obp-style.git"
   },
   "license": "MIT",
   "scripts": {
