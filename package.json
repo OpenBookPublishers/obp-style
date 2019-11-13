@@ -15,11 +15,13 @@
   },
   "devDependencies": {
     "academicons": "1.8.6",
+    "del": "^4.1.1",
     "icomoon": "1.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "latest",
     "gulp-csscomb": "latest",
+    "gulp-favicons": "2.3.1",
     "gulp-mustache": "4.1.2",
     "gulp-rename": "latest",
     "gulp-sass": "latest",
