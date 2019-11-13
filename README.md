@@ -33,8 +33,3 @@ or
 npm install
 gulp
 ```
-
-### JSON-LD information
-To be included using:
-```
-<script type="application/ld+json" src="./app-ld.json">
