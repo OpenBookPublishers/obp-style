@@ -1,0 +1,39 @@
+{
+  "name": "obp-style",
+  "version": "0.0.1",
+  "description": "OBP House Style",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openbookpublishers/obp_style.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "gulp",
+    "sass": "gulp sass",
+    "metadata": "gulp metadata",
+    "watch": "gulp watch"
+  },
+  "devDependencies": {
+    "academicons": "1.8.6",
+    "icomoon": "1.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "latest",
+    "gulp-csscomb": "latest",
+    "gulp-mustache": "4.1.2",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "2.6.5",
+    "jstransformer-highlight": "latest",
+    "jstransformer-markdown-it": "latest",
+    "spectre.css": "0.5.8"
+  },
+  "browserslist": [
+    "last 4 Chrome versions",
+    "Edge >= 12",
+    "Firefox ESR",
+    "last 4 Safari versions",
+    "last 4 Opera versions",
+    "Explorer >= 10"
+  ]
+}
