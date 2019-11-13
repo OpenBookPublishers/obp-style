@@ -27,6 +27,10 @@ const paths = {
   }
 };
 
+function clean() {
+  return del(paths.output.root, { force: true });
+};
+
 function watch() {
   gulp.watch('./src/sass/**/*.scss', ['sass']);
 };
@@ -105,6 +109,7 @@ function metadata() {
 };
 
 exports.default = gulp.series(sass, icomoon, academicons, icons, metadata);
+exports.clean = clean;
 exports.sass = sass;
 exports.icons = icons;
 exports.fonts = gulp.series(icomoon, academicons);
