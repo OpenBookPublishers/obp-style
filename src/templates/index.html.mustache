@@ -13,28 +13,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="./app.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/app.min.css" media="screen" />
 
     <!-- Icons and Web Application definition -->
     {{> webapp.html.mustache}}
 
     <!-- Social Media Metadata -->
-    <meta property="og:site_name" content="{{{APP_NAME}}}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{{APP_NAME}}}" />
-    <meta property="og:description" content="{{{APP_DESCRIPTION}}}" />
-    <meta property="og:url" content="{{{APP_URL}}}" />
-    <meta property="og:image" content="{{{APP_IMAGE}}}" />
-    <meta property="article:publisher" content="{{{ORG_FACEBOOK}}}" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{{APP_NAME}}}" />
-    <meta name="twitter:description" content="{{{APP_DESCRIPTION}}}" />
-    <meta name="twitter:url" content="{{{APP_URL}}}" />
-    <meta name="twitter:image" content="{{{APP_IMAGE}}}" />
-    <meta name="twitter:site" content="{{{ORG_TWITTERHANDLE}}}" />
+    {{> social.html.mustache}}
 
     <!-- Website JSON-LD Metadata -->
-    <script type="application/ld+json" src="./app-ld.json" />
+    <script type="application/ld+json" src="app-ld.json" />
   </head>
   <body>
   </body>
