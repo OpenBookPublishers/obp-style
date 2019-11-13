@@ -9,13 +9,17 @@ const mustache = require('gulp-mustache');
 const config = require('./config');
 
 const paths = {
-  source: './src/sass/*.scss',
-  icomoon: './node_modules/icomoon/fonts/*',
-  academicons: './node_modules/academicons/fonts/*',
-  templates: './src/templates/*.mustache',
-  destination: './dist',
-  css: './dist/css',
-  fonts: './dist/fonts'
+  source: {
+    sass: './src/sass/*.scss',
+    icomoon: './node_modules/icomoon/fonts/*',
+    academicons: './node_modules/academicons/fonts/*',
+    templates: './src/templates/*.mustache'
+  },
+  output: {
+    root: './dist',
+    css: './dist/css',
+    fonts: './dist/fonts'
+  }
 };
 
 function watch() {
@@ -23,17 +27,17 @@ function watch() {
 };
 
 function icomoon() {
-  return gulp.src(paths.icomoon)
-    .pipe(gulp.dest(paths.fonts));
+  return gulp.src(paths.source.icomoon)
+    .pipe(gulp.dest(paths.output.fonts));
 }
 
 function academicons() {
-  return gulp.src(paths.academicons)
-    .pipe(gulp.dest(paths.fonts));
+  return gulp.src(paths.source.academicons)
+    .pipe(gulp.dest(paths.output.fonts));
 }
 
 function sass() {
-  return gulp.src(paths.source)
+  return gulp.src(paths.source.sass)
     .pipe(sourcemaps.init())
     .pipe(gulpsass({outputStyle: 'compact', precision: 10})
       .on('error', gulpsass.logError)
@@ -41,21 +45,21 @@ function sass() {
     .pipe(sourcemaps.write())
     .pipe(autoprefixer())
     .pipe(csscomb())
-    .pipe(gulp.dest(paths.css))
+    .pipe(gulp.dest(paths.output.css))
     .pipe(cleancss())
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest(paths.css));
+    .pipe(gulp.dest(paths.output.css));
 };
 
 function metadata() {
-  return gulp.src(paths.templates)
+  return gulp.src(paths.source.templates)
     .pipe(mustache(config))
     .pipe(rename({
           extname: ""  // removes the .mustache extension from template files
     }))
-    .pipe(gulp.dest(paths.destination));
+    .pipe(gulp.dest(paths.output.root));
 };
 
 exports.default = gulp.series(sass, icomoon, academicons, metadata);
